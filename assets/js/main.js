@@ -84,3 +84,26 @@ function activePortfolio() {
     }
 }
 linkPortfolio.forEach(l => l.addEventListener('click', activePortfolio))
+
+// SWIPER CAROUSEL  
+
+const swiper = new Swiper('.testimonial_container', {
+    
+    spaceBetween: 16,
+    loop: true,
+    grabCursor: true,
+  
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    breakpoints: {
+        640: {
+            slidesPerview: 2,
+        },
+        1024: {
+            slidesPreview: 3,
+        },
+    }
+});
